@@ -1,18 +1,20 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Movie } from '../../model/movie.model';
+import config from '../config';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: 'postgres',
-      host: 'localhost',
-      port: 5432,
-      username: 'm0v1es_user',
-      password: 'sodoucs39sq4v5vv',
-      database: 'nest_movie_db',
+      type: config.get('dbType') as 'postgres',
+      host: config.get('dbHost'),
+      port: config.get('dbPort') as number,
+      username: config.get('dbUsername') || 'postgres',
+      password: config.get('dbPassword') || '',
+      database: config.get('dbName') || 'postgres',
       entities: [Movie],
       synchronize: true,
+      logging: config.get('dbLogging') as boolean,
     }),
   ],
   //exports: [TypeOrmModule]
