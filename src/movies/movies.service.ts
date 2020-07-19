@@ -31,18 +31,14 @@ export class MoviesService {
   }
 
   async updateMovie(id: number, movie: Movie): Promise<Movie> {
-    const movieFound: Movie = await this.movieRepository.findOne(id);
-
-    if (!movieFound) {
-      throw new MovieNotFoundException();
-    }
+    const movieFound: Movie = await this.getMovieById(id);
 
     await this.movieRepository.update(id, _.assign(movieFound, movie));
 
     return movieFound;
   }
 
-  async removeMovie(id: number): Promise<void> {
-    // this.movieRepository
+  async removeMovieById(id: number): Promise<void> {
+    await this.movieRepository.delete(await this.getMovieById(id));
   }
 }

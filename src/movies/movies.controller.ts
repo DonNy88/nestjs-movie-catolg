@@ -1,4 +1,12 @@
-import { Controller, Get, Query, Post, Body, Put } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Query,
+  Post,
+  Body,
+  Put,
+  Delete,
+} from '@nestjs/common';
 import { Movie } from '../model/movie.model';
 import { MoviesService } from './movies.service';
 
@@ -26,8 +34,8 @@ export class MoviesController {
     return await this.movieService.updateMovie(id, movie);
   }
 
-  // @Delete()
-  // async deleteMovie(@Query() id: number): Promise<void> {
-  //   await this.movieService.removeMovieById(id);
-  // }
+  @Delete()
+  async deleteMovie(@Query() id: number): Promise<void> {
+    await this.movieService.removeMovieById(id);
+  }
 }
