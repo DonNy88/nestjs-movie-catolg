@@ -145,16 +145,16 @@ const config: convict.Config<any> = convict({
   //   env: 'REDIS_PASSWORD',
   //   sensitive: true
   // },
-  // rateLimitMax: {
-  //   format: Number,
-  //   default: 12,
-  //   env: 'RATE_LIMIT_MAX'
-  // },
-  // rateLimitWindowMs: {
-  //   format: Number,
-  //   default: 2 * 60 * 1000, // 2 mins
-  //   env: 'RATE_LIMIT_WINDOW_MS'
-  // },
+  rateLimitMax: {
+    format: Number,
+    default: 12,
+    env: 'RATE_LIMIT_MAX',
+  },
+  rateLimitWindowMs: {
+    format: Number,
+    default: 2 * 60 * 1000, // 2 mins
+    env: 'RATE_LIMIT_WINDOW_MS',
+  },
   // rateLimitRedisStorePrefix: {
   //   format: String,
   //   default: 'loyal-auth-redis-limt',

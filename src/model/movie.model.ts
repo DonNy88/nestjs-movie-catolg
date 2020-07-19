@@ -8,12 +8,12 @@ export class Movie {
   @Column()
   title: string;
 
-  @Column()
+  @Column({ nullable: true })
   description: string;
 
   @Column()
   duration: number;
 
-  @Column()
+  @Column({ nullable: true })
   genre: string;
 }
