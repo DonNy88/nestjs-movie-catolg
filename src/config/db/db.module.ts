@@ -17,6 +17,5 @@ import config from '../config';
       logging: config.get('dbLogging') as boolean,
     }),
   ],
-  //exports: [TypeOrmModule]
 })
 export class DbModule {}

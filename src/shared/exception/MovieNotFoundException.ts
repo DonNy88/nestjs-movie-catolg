@@ -1,7 +1,7 @@
-import { HttpStatus, HttpException } from '@nestjs/common';
+import { NotFoundException } from '@nestjs/common';
 
-export class MovieNotFoundException extends HttpException {
+export class MovieNotFoundException extends NotFoundException {
   constructor() {
-    super('Movie not found.', HttpStatus.NOT_FOUND);
+    super('Movie not found.');
   }
 }
