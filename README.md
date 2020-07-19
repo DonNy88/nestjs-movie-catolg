@@ -1,75 +1,524 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-</p>
+<h1 align="center">Movie Catalog Api</h3>
 
-[travis-image]: https://api.travis-ci.org/nestjs/nest.svg?branch=master
-[travis-url]: https://travis-ci.org/nestjs/nest
-[linux-image]: https://img.shields.io/travis/nestjs/nest/master.svg?label=linux
-[linux-url]: https://travis-ci.org/nestjs/nest
-  
-  <p align="center">A progressive <a href="http://nodejs.org" target="blank">Node.js</a> framework for building efficient and scalable server-side applications, heavily inspired by <a href="https://angular.io" target="blank">Angular</a>.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/dm/@nestjs/core.svg" alt="NPM Downloads" /></a>
-<a href="https://travis-ci.org/nestjs/nest"><img src="https://api.travis-ci.org/nestjs/nest.svg?branch=master" alt="Travis" /></a>
-<a href="https://travis-ci.org/nestjs/nest"><img src="https://img.shields.io/travis/nestjs/nest/master.svg?label=linux" alt="Linux" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#5" alt="Coverage" /></a>
-<a href="https://gitter.im/nestjs/nestjs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge"><img src="https://badges.gitter.im/nestjs/nestjs.svg" alt="Gitter" /></a>
-<a href="https://opencollective.com/nest#backer"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec"><img src="https://img.shields.io/badge/Donate-PayPal-dc3d53.svg"/></a>
-  <a href="https://twitter.com/nestframework"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+---
 
-## Description
+Simple REST Api that maintains a Movie catalog. 
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## 📝 Table of Contents
 
-## Installation
+- [Getting Started](#getting_started)
+- [Deployment](#deployment)
+- [Usage](#usage)
+- [ER Diagram](#erDiagram)
+- [Project Structure](#projectStructure)
+- [Api Calls](#apiCalls)
+- [Built Using](#built_using)
+- [TODO](./TODO.md)
+- [Authors](#authors)
 
+## 🏁 Getting Started <a name = "getting_started"></a>
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+
+### Prerequisites
+
+Clone this project with this bash command:
 ```bash
-$ npm install
+git clone https://github.com/DonNy88/nestjs-movie-catolg
 ```
 
-## Running the app
+For running this NestJS Application you need *Node.js*, *Nest CLI*, *Yarn* *Docker* and *Docker Compose*. If you do not have these things yet here below you can find where to get them.
+
+
+- Docker for Windows [Link](https://docs.docker.com/docker-for-windows/install/)
+- Docker for OS X [Link](https://docs.docker.com/docker-for-mac/install/)
+- Docker compose [Link](https://docs.docker.com/compose/install/)
+- Node.js [Link](https://nodejs.org/en/)
+- Nest CLI [Link](https://docs.nestjs.com/cli/overview)
+- Yarn [Link](https://classic.yarnpkg.com/en/docs/install)
+
+## 🚀 Deployment <a name = "deployment"></a>
+
+Please, see [TODO](./TODO.md) file.
+
+
+## 🎈 Usage <a name="usage"></a>
+
+For run this Spring Boot Application use this command:
 
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+docker-compose up
 ```
 
-## Test
+## 🔧 Running the tests <a name = "tests"></a>
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+yarn test
 ```
+## ER Diagram <a name = "erDiagram"></a>
 
-## Support
+![ER Diagram](./MovieCatolg-ER-Diagram.png "ER Diagram")
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+## Api Calls <a name = "apiCalls"></a>
 
-## Stay in touch
+### Movie Endpoints
+#### GET /movies/all
+Fetch all movies present on the system
+###### Respone Body example
+```json
+{
+  "status": "OK",
+  "message": "Success",
+  "body": [
+    {
+      "id": 1,
+      "title": "Mummy",
+      "overview": "The best movie",
+      "duration": 300,
+      "rating": 4,
+      "movieDirector": {
+        "id": 1,
+        "name": "Donald",
+        "middleName": "Emeka",
+        "surname": "Achugo"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Mask",
+      "overview": "The second best movie",
+      "duration": 230,
+      "rating": 3,
+      "movieDirector": {
+        "id": 1,
+        "name": "Donald",
+        "middleName": "Emeka",
+        "surname": "Achugo"
+      }
+    }
+  ]
+}
+```
+or
+```json
+{
+  "status": "OK",
+  "message": "Success",
+  "body": []
+}
+```
+#### GET /movies?movieId={}
+Fetch a movie by *movieId*
+###### Respone Body example
+```json
+{
+  "status": "OK",
+  "message": "Success",
+  "body": {
+    "id": 2,
+    "title": "Mask",
+    "overview": "The second best movie",
+    "duration": 230,
+    "rating": 3,
+    "movieDirector": {
+      "id": 1,
+      "name": "Donald",
+      "middleName": "Emeka",
+      "surname": "Achugo"
+    }
+  }
+}
+```
+##### Exception Cases
+###### Status Code 404 NOT FOUND
+```json
+{
+  "status": "NOT_FOUND",
+  "message": "No movie found",
+  "body": null
+}
+```
+#### POST /movies
+Add a Movie into the catolg
+###### Request Body example
+```
+{
+  "title": "Mummy", // Title of the movie
+  "overview": "The best movie of the world", // Description of the movie
+  "duration": 300, // Duration in minutes of the movie
+  "rating": 3, // Rating of the movie from 1 to 5
+  "movieDirectorId": 1, // Movie director id. NB: the movie director has been saved before
+}
+```
+###### Response Body example
+```json
+{
+  "status": "CREATED",
+  "message": "Success",
+  "body": {
+    "id": 3,
+    "title": "Mummy",
+    "overview": "The second best movie",
+    "duration": 300,
+    "rating": 3,
+    "movieDirector": {
+      "id": 1,
+      "name": "Donald",
+      "middleName": "Emeka",
+      "surname": "Achugo"
+    }
+  }
+}
+```
+##### Exception Cases
+###### Status Code 404 NOT FOUND
+```json
+{
+  "status": "NOT_FOUND",
+  "message": "No Movie Director found",
+  "body": null
+}
+```
+#### PUT /movies
+Update a Movie
+###### Request Body example
+```
+{
+  "title": "Mummy", // Title of the movie
+  "overview": "The best movie of the world", // Description of the movie
+  "duration": 300, // Duration in minutes of the movie
+  "rating": 3, // Rating of the movie from 1 to 5
+  "movieDirectorId": 1, // Movie director id. NB: the movie director has been saved before
+}
+```
+###### Response Body example
+```json
+{
+  "status": "OK",
+  "message": "Success",
+  "body": {
+    "id": 3,
+    "title": "Mummy",
+    "overview": "The second best movie",
+    "duration": 300,
+    "rating": 3,
+    "movieDirector": {
+      "id": 1,
+      "name": "Donald",
+      "middleName": "Emeka",
+      "surname": "Achugo"
+    }
+  }
+}
+```
+##### Exception Cases
+###### Status Code 400 BAD REQUEST
+```json
+{
+  "status": "BAD REQUEST",
+  "message": "No arguments provided",
+  "body": null
+}
+```
+###### Status Code 404 NOT FOUND
+```json
+{
+  "status": "NOT_FOUND",
+  "message": "No movie found",
+  "body": null
+}
+```
+###### Status Code 404 NOT FOUND
+```json
+{
+  "status": "NOT_FOUND",
+  "message": "No Movie Director found",
+  "body": null
+}
+```
+#### DELETE /movies?movieId={}
+Remove a Movie by *movieId*
+##### Exception Cases
+###### Status Code 404 NOT FOUND
+```json
+{
+  "status": "NOT_FOUND",
+  "message": "No movie found",
+  "body": null
+}
+```
+#### GET /movies/searchByRating?aboveRating={} 
+Fetch movies where the rating is greater than or equals to *aboveReting*
+###### Response Body example
+```json
+{
+  "status": "OK",
+  "message": "Success",
+  "body": [
+    {
+      "id": 1,
+      "title": "Mummy",
+      "overview": "The best movie",
+      "duration": 300,
+      "rating": 4,
+      "movieDirector": {
+        "id": 1,
+        "name": "Donald",
+        "middleName": "Emeka",
+        "surname": "Achugo"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Mask",
+      "overview": "The second best movie",
+      "duration": 230,
+      "rating": 3,
+      "movieDirector": {
+        "id": 1,
+        "name": "Donald",
+        "middleName": "Emeka",
+        "surname": "Achugo"
+      }
+    }
+  ]
+}
+```
+##### Exception Cases
+###### Status Code 400 BAD REQUEST
+```json
+{
+  "status": "BAD_REQUEST",
+  "message": "Rating must be greater than 0 and less than 6",
+  "body": null
+}
+```
+###### Status Code 404 NOT FOUND
+```json
+{
+  "status": "NOT_FOUND",
+  "message": "No movie found",
+  "body": null
+}
+```
+#### GET /movies/searchByMovieDirector?movieDirectorId={}
+Fetch Movies by *movieDirectorId*
+```json
+{
+  "status": "OK",
+  "message": "Success",
+  "body": [
+    {
+      "id": 1,
+      "title": "Mummy",
+      "overview": "The best movie",
+      "duration": 300,
+      "rating": 4,
+      "movieDirector": {
+        "id": 1,
+        "name": "Donald",
+        "middleName": "Emeka",
+        "surname": "Achugo"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Mask",
+      "overview": "The second best movie",
+      "duration": 230,
+      "rating": 3,
+      "movieDirector": {
+        "id": 1,
+        "name": "Donald",
+        "middleName": "Emeka",
+        "surname": "Achugo"
+      }
+    }
+  ]
+}
+```
+##### Exception Cases
+###### Status Code 404 NOT FOUND
+```json
+{
+  "status": "NOT_FOUND",
+  "message": "No Movie Director found",
+  "body": null
+}
+```
+###### Status Code 404 NOT FOUND
+```json
+{
+  "status": "NOT_FOUND",
+  "message": "The Movie Director has directed no movie yet",
+  "body": null
+}
+```
+### Movie Director Endpoints
+#### GET /movies/directors/all
+Fetch all movies directors present on the system
+###### Respone Body example
+```json
+{
+  "status": "OK",
+  "message": "Success",
+  "body": [
+    {
+      "id": 1,
+      "name": "Donald",
+      "middleName": "Emeka",
+      "surname": "Achugo"
+    },
+    {
+      "id": 2,
+      "name": "Donald",
+      "middleName": null,
+      "surname": "Trump"
+    }
+  ]
+}
+```
+or
+```json
+{
+  "status": "OK",
+  "message": "Success",
+  "body": []
+}
+```
+#### GET /movies/directors?movieDirectorId={}
+Fetch a movie director by *movieDirectorId*
+###### Respone Body example
+```json
+{
+  "status": "OK",
+  "message": "Success",
+  "body": {
+    "id": 1,
+    "name": "Donald",
+    "middleName": "Emeka",
+    "surname": "Achugo"
+  }
+}
+```
+##### Exception Cases
+###### Status Code 404 NOT FOUND
+```json
+{
+  "status": "NOT_FOUND",
+  "message": "No Movie Director found",
+  "body": null
+}
+```
+#### POST /movies/directors
+Add a Movie Direcotor into the catolog
+###### Request Body example
+```json
+{
+  "name": "Donald",
+  "middleName": "Emeka",
+  "surname": "Achugo"
+}
+```
+###### Response Body example
+```json
+{
+  "status": "CREATED",
+  "message": "Success",
+  "body": {
+    "id": 3,
+    "name": "Donald",
+    "middleName": "Emeka",
+    "surname": "Achugo"
+  }
+}
+```
+#### PUT /movies/directors
+Update a Movie Director
+###### Request Body example
+```json
+{
+  "id": 3,
+  "name": "Tommy"
+}
+```
+or
+```json
+{
+  "id": 3,
+  "name": "Tommy",
+  "surname": "Smith"
+}
+```
+###### Response Body example
+```json
+{
+  "status": "OK",
+  "message": "Success",
+  "body": {
+    "id": 3,
+    "name": "Tommy",
+    "middleName": "Emeka",
+    "surname": "Achugo"
+  }
+}
+```
+or
+```json
+{
+  "status": "OK",
+  "message": "Success",
+  "body": {
+    "id": 3,
+    "name": "Tommy",
+    "middleName": "Emeka",
+    "surname": "Smith"
+  }
+}
+```
+##### Exception Cases
+###### Status Code 400 BAD REQUEST
+```json
+{
+  "status": "BAD REQUEST",
+  "message": "No arguments provided",
+  "body": null
+}
+```
+###### Status Code 404 NOT FOUND
+```json
+{
+  "status": "NOT_FOUND",
+  "message": "No Movie Director found",
+  "body": null
+}
+```
+#### DELETE /movies/directors?movieDirectorId={}
+Remove a Movie Director by *movieDirectorId*
+##### Exception Cases
+###### Status Code 404 NOT FOUND
+```json
+{
+  "status": "NOT_FOUND",
+  "message": "No Movie Director found",
+  "body": null
+}
+```
+## ⛏️ Built Using <a name = "built_using"></a>
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- [Docker](https://www.docker.com/)
+- [Node.js](https://nodejs.org/en/about/)
+- [NestJS](https://nestjs.com/)
+- [Postgres](https://www.postgresql.org/)
 
-## License
+## ✍️ Authors <a name = "authors"></a>
 
-  Nest is [MIT licensed](LICENSE).
+- [@DonNya88](https://github.com/DonNy88) - Initial work
+
+<!-- See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
+
+## 🎉 Acknowledgements <a name = "acknowledgement"></a>
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- References -->
