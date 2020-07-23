@@ -7,7 +7,7 @@ import {
   Put,
   Delete,
 } from '@nestjs/common';
-import { Movie } from '../model/movie.model';
+import { Movie } from './movie.entity';
 import { MoviesService } from './movies.service';
 
 @Controller('movies')

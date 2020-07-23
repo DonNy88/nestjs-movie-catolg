@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { Movie } from '../model/movie.model';
+import { Movie } from './movie.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { MovieNotFoundException } from '../shared/exception/MovieNotFoundException';
+import { MovieNotFoundException } from '../common/exception/MovieNotFoundException';
 import * as _ from 'lodash';
 
 @Injectable()

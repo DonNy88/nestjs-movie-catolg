@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Movie } from '../../model/movie.model';
+import { Movie } from '../../movies/movie.entity';
 import config from '../config';
 
 @Module({

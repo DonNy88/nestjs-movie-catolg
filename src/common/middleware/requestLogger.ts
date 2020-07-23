@@ -1,5 +1,5 @@
 import * as morgan from 'morgan';
-import config from '../config';
+import config from '../../config';
 
 const isProd: boolean = config.get('env') === 'production';
 const isTest: boolean = config.get('env') === 'test';
