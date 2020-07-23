@@ -7,6 +7,7 @@ RUN yarn install --production
 FROM mhart/alpine-node:13.12.0 as BUILD
 WORKDIR /app
 COPY . .
+COPY --from=DEPENDECIES /app/node_modules/ ./node_modules
 RUN yarn install && \
     yarn build
 

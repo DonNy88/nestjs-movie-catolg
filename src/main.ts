@@ -4,8 +4,8 @@ import * as compression from 'compression';
 import * as helmet from 'helmet';
 import * as cors from 'cors';
 import config from './config';
-import requestLogger from './middleware/requestLogger';
-import rateLimiter from './middleware/rateLimiter';
+import requestLogger from './common/middleware/requestLogger';
+import rateLimiter from './common/middleware/rateLimiter';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
