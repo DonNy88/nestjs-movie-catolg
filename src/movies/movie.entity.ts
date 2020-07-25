@@ -1,9 +1,16 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  ManyToMany,
+  JoinTable,
+} from 'typeorm';
+import { MovieDirector } from './movie-directors/movie-director.entity';
 
 @Entity()
 export class Movie {
   @PrimaryGeneratedColumn()
-  id: number;
+  _id: number;
 
   @Column()
   title: string;
@@ -16,4 +23,9 @@ export class Movie {
 
   @Column({ nullable: true })
   genre: string;
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  @ManyToMany(type => MovieDirector)
+  @JoinTable()
+  directors: MovieDirector[];
 }
