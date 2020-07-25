@@ -8,16 +8,16 @@ services:
       - POSTGRESQL_USERNAME=m0v1es_user
       - POSTGRESQL_PASSWORD=sodoucs39sq4v5vv
       - POSTGRESQL_DATABASE=nest_movie_db
-  backend:
-    depends_on: 
-      - db
-    build: .
-    ports:
-      - 3030:3000
-    environment:
-      - NODE_ENV=production
-      - DB_HOST=db
-      - DB_PORT=5432
-      - DB_USERNAME=m0v1es_user
-      - DB_PASS=sodoucs39sq4v5vv
-      - DB_NAME=nest_movie_db
+  # backend:
+  #   depends_on: 
+  #     - db
+  #   build: .
+  #   ports:
+  #     - 3030:3000
+  #   environment:
+  #     - NODE_ENV=production
+  #     - DB_HOST=db
+  #     - DB_PORT=5432
+  #     - DB_USERNAME=m0v1es_user
+  #     - DB_PASS=sodoucs39sq4v5vv
+  #     - DB_NAME=nest_movie_db

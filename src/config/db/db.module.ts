@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Movie } from '../../movies/movie.entity';
+import { MovieDirector } from 'src/movies/movie-directors/movie-director.entity';
 import config from '../config';
 
 @Module({
@@ -12,7 +13,7 @@ import config from '../config';
       username: config.get('dbUsername') || 'postgres',
       password: config.get('dbPassword') || '',
       database: config.get('dbName') || 'postgres',
-      entities: [Movie],
+      entities: [Movie, MovieDirector],
       synchronize: true,
       logging: config.get('dbLogging') as boolean,
     }),
