@@ -1,5 +1,7 @@
 <h1 align="center">Movie Catalog Api</h3>
 
+[![Build Status](https://travis-ci.com/DonNy88/nestjs-movie-catolg.svg?branch=master)](https://travis-ci.com/DonNy88/nestjs-movie-catolg)
+
 ---
 
 Simple REST Api that maintains a Movie catalog. 
