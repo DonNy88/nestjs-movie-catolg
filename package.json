@@ -21,7 +21,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "commit": "git-cz",
     "release": "standard-version -a",
-    "all-shields-cli": "all-shields-generate"
+    "generate:badge": "all-shields-generate"
   },
   "dependencies": {
     "@nestjs/common": "^7.0.0",
@@ -47,6 +47,7 @@
     "@nestjs/cli": "^7.0.0",
     "@nestjs/schematics": "^7.0.0",
     "@nestjs/testing": "^7.0.0",
+    "@ptkdev/all-shields-cli": "^1.2.0",
     "@types/compression": "^1.7.0",
     "@types/convict": "^5.2.1",
     "@types/cors": "^2.8.6",
@@ -99,7 +100,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
+      "pre-commit": "yarn generate:badge && lint-staged"
     }
   },
   "lint-staged": {
