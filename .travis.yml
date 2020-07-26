@@ -5,4 +5,5 @@ services:
   - docker
 
 script:
+  - yarn test
   - docker build .
