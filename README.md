@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/DonNy88/nestjs-movie-catolg.svg?branch=master)](https://travis-ci.com/DonNy88/nestjs-movie-catolg)
 <!-- all-shields/service-version-badge:START -->
-[![MovieCatalog version](https://img.shields.io/badge/version-0.0.3-lightgray.svg?style=flat&logo=npm)]() 
+[![MovieCatalog version](https://img.shields.io/badge/version-0.0.4-lightgray.svg?style=flat&logo=npm)]() 
 <!-- all-shields/service-version-badge:END -->
 
 ---
