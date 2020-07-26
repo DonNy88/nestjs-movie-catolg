@@ -55,6 +55,6 @@ export class MoviesController {
   async deleteMovie(@Query() id: number): Promise<RespnseDto> {
     await this.movieService.removeMovieById(id);
 
-    return new RespnseDto({ message: 'Movie removed' });
+    return new RespnseDto({ message: 'Movie has been removed' });
   }
 }
