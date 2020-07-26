@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/DonNy88/nestjs-movie-catolg/compare/v0.0.3...v0.0.4) (2020-07-26)
+
+
+### Features
+
+* **movie-director-controller:** added movie directors endpoints ([3a25950](https://github.com/DonNy88/nestjs-movie-catolg/commit/3a259502c56aea5561ca8e0fe6560670fcd4e622))
+
 ### [0.0.3](https://github.com/DonNy88/nestjs-movie-catolg/compare/v0.0.2...v0.0.3) (2020-07-19)
 
 
