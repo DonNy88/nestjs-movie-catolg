@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { MovieDirector } from './movie-director.entity';
 import { Repository } from 'typeorm';
-import { MovieNotFoundException } from 'src/common/exception/MovieNotFoundException';
+import { MovieNotFoundException } from '../../common/exception/MovieNotFoundException';
 import * as _ from 'lodash';
 
 @Injectable()
