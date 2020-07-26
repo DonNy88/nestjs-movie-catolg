@@ -1,0 +1,18 @@
+{
+  "files": ["README.md"],
+  "shields": [
+    {
+      "id": "service-version-badge",
+      "badges": [
+        {
+          "label": "version",
+          "title": "MovieCatalog version",
+          "message": "{{version}}",
+          "style": "flat",
+          "logo": "npm",
+          "platform": "shields"
+        }
+      ]
+    }
+  ]
+}
