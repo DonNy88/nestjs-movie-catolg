@@ -25,7 +25,7 @@ export class MovieDirectorsController {
   }
 
   @Get()
-  async fetchMovie(@Query() id: number): Promise<RespnseDto> {
+  async fetchMovie(@Query('id') id: number): Promise<RespnseDto> {
     return new RespnseDto({
       data: await this.movieDirectorsService.getMovieById(id),
     });
@@ -43,7 +43,7 @@ export class MovieDirectorsController {
 
   @Put()
   async updateMovie(
-    @Query() id: number,
+    @Query('id') id: number,
     @Body() movie: MovieDirector,
   ): Promise<RespnseDto> {
     return new RespnseDto({
@@ -52,9 +52,8 @@ export class MovieDirectorsController {
   }
 
   @Delete()
-  async deleteMovie(@Query() id: number): Promise<RespnseDto> {
+  async deleteMovie(@Query('id') id: number): Promise<RespnseDto> {
     await this.movieDirectorsService.removeMovieById(id);
-
     return new RespnseDto({ message: 'MovieDirector has been removed' });
   }
 }
