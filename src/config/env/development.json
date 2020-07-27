@@ -3,5 +3,6 @@
   "dbUsername": "m0v1es_user",
   "dbPassword": "sodoucs39sq4v5vv",
   "dbName": "nest_movie_db",
-  "dbLogging": true
+  "dbLogging": true,
+  "rateLimitMax": 100
 }

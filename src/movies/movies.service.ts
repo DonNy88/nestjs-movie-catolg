@@ -32,9 +32,7 @@ export class MoviesService {
 
   async updateMovie(id: number, movie: Movie): Promise<Movie> {
     const movieFound: Movie = await this.getMovieById(id);
-
     await this.movieRepository.update(id, _.assign(movieFound, movie));
-
     return movieFound;
   }
 
