@@ -11,6 +11,6 @@ export default class RespnseDto extends Dto {
     message?: string;
     data?: any;
   }) {
-    super(statusCode, message, data, null);
+    super(statusCode, message, data, undefined);
   }
 }
