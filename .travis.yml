@@ -7,7 +7,3 @@ services:
 script:
   - yarn test
   - docker build .
-
-branches:
-  only: 
-    - master
