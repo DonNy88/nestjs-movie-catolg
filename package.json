@@ -25,7 +25,7 @@
     "generate:badge": "all-shields-generate"
   },
   "dependencies": {
-    "@nestjs/common": "^7.0.0",
+    "@nestjs/common": "^7.5.2",
     "@nestjs/core": "^7.5.2",
     "@nestjs/platform-express": "^7.5.2",
     "@nestjs/typeorm": "^7.1.0",
