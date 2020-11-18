@@ -28,7 +28,7 @@
     "@nestjs/common": "^7.5.2",
     "@nestjs/core": "^7.5.2",
     "@nestjs/platform-express": "^7.5.3",
-    "@nestjs/typeorm": "^7.1.0",
+    "@nestjs/typeorm": "^7.1.5",
     "compression": "^1.7.4",
     "convict": "^6.0.0",
     "cors": "^2.8.5",
