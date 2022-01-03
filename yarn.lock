@@ -4050,10 +4050,10 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
-helmet@*, helmet@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/helmet/-/helmet-4.2.0.tgz#e81f5613cc1c90402af581794dc9878ad078b237"
-  integrity sha512-aoiSxXMd0ks1ojYpSCFoCRzgv4rY/uB9jKStaw8PkXwsdLYa/Gq+Nc5l0soH0cwBIsLAlujPnx4HLQs+LaXCrQ==
+helmet@*, helmet@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/helmet/-/helmet-5.0.0.tgz#3084c827f51b3c7680cfe99d5d8f29ec39a74fb9"
+  integrity sha512-wCuTCJZnEKXagvjcZiAnXkzS4lh8mTJ/JhhC5XjH5vPvSzzX/8Y88u6mfE3F66itB6UIA7uZEekXJsbdFTOiPw==
 
 highlight.js@^9.6.0:
   version "9.18.3"

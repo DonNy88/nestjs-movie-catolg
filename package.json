@@ -33,7 +33,7 @@
     "convict": "^6.0.0",
     "cors": "^2.8.5",
     "express-rate-limit": "^5.2.3",
-    "helmet": "^4.2.0",
+    "helmet": "^5.0.0",
     "lodash": "4.17.20",
     "morgan": "^1.10.0",
     "pg": "^8.5.1",
