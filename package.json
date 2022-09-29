@@ -45,7 +45,7 @@
   "devDependencies": {
     "@commitlint/cli": "^9.1.1",
     "@commitlint/config-conventional": "^9.1.1",
-    "@nestjs/cli": "^7.5.3",
+    "@nestjs/cli": "^9.1.4",
     "@nestjs/schematics": "^7.2.2",
     "@nestjs/testing": "^7.5.4",
     "@ptkdev/all-shields-cli": "^1.2.0",
